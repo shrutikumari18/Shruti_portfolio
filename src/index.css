@@ -29,10 +29,6 @@
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Space Grotesk', system-ui, sans-serif;
 
-  --shadow-glow: none;
-  --shadow-card: 0 2px 8px rgba(31, 41, 36, 0.06);
-  --shadow-elevated: 0 8px 24px rgba(31, 41, 36, 0.1);
-
   --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
