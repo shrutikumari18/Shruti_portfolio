@@ -4,10 +4,10 @@ import './Projects.css';
 
 const github = 'https://github.com/shrutikumari18';
 const projects = [
-  { title: 'SYNEX GEN', description: 'A full-stack platform combining technology news, AI insights, events, Q&A, careers and hackathons in one practical experience.', tags: ['React', 'Node.js', 'AI'], github: 'https://github.com/HimanshuRajGiri/SYNEX_GEN', icon: <Globe size={19} /> },
+  { title: 'SYNEX GEN', description: 'A full-stack Collaborative platform combining technology news, AI insights, events, Q&A, careers and hackathons in one practical experience.', tags: ['React', 'Node.js', 'AI'], github: 'https://github.com/HimanshuRajGiri/SYNEX_GEN', icon: <Globe size={19} /> },
   { title: 'Gesture & Face Recognition', description: 'A computer-vision system for real-time gesture and face recognition using camera input and touch-free interaction.', tags: ['Python', 'OpenCV', 'MediaPipe'], github: `${github}/GestureFace_Control`, icon: <Cpu size={19} /> },
   { title: 'IPL Power BI Dashboard', description: 'An interactive dashboard exploring IPL matches, teams, players, venues, seasons and performance trends.', tags: ['Power BI', 'DAX', 'Data Analytics'], github: `${github}/IPL_Data_Analysis_Dashboard`, icon: <BarChart3 size={19} /> },
-  { title: 'Loan Approval Prediction', description: 'A machine-learning model that predicts loan approval from financial and asset-related applicant features.', tags: ['Python', 'ML', 'Decision Tree'], github: `${github}/LoanApproval_Prediction-Decision_Tree_`, icon: <Code2 size={19} /> },
+  { title: 'Loan Approval Prediction-Model Comparison', description: 'A machine-learning model that predicts loan approval from financial and asset-related applicant features. 4 ML Algorithms are implemented to see Accuracy difference. ', tags: ['Python', 'ML', 'Decision Tree'], github: `${github}/LoanApproval_Prediction-Decision_Tree_`, icon: <Code2 size={19} /> },
 ];
 
 function ProjectCard({ project }) {
