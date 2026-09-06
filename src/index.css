@@ -4,34 +4,34 @@
    CSS DESIGN TOKENS
 ============================== */
 :root {
-  --bg-primary: #030305;
-  --bg-secondary: #08080f;
-  --bg-card: rgba(255, 255, 255, 0.03);
-  --bg-card-hover: rgba(255, 255, 255, 0.06);
+  --bg-primary: #fbfaf7;
+  --bg-secondary: #f2f0eb;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f6f7f3;
 
-  --accent-primary: #8b5cf6;
-  --accent-secondary: #c084fc;
-  --accent-tertiary: #f472b6;
-  --accent-glow: rgba(139, 92, 246, 0.25);
+  --accent-primary: #2f6f55;
+  --accent-secondary: #2f6f55;
+  --accent-tertiary: #d6a84f;
+  --accent-glow: rgba(47, 111, 85, 0.12);
 
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-primary: #1f2924;
+  --text-secondary: #5d6861;
+  --text-muted: #7f8982;
 
-  --border: rgba(255, 255, 255, 0.06);
-  --border-accent: rgba(139, 92, 246, 0.3);
+  --border: #dfe4dd;
+  --border-accent: #a9c7b4;
 
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-xl: 32px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Space Grotesk', system-ui, sans-serif;
 
-  --shadow-glow: 0 0 40px rgba(139, 92, 246, 0.1);
-  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  --shadow-elevated: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+  --shadow-glow: none;
+  --shadow-card: 0 2px 8px rgba(31, 41, 36, 0.06);
+  --shadow-elevated: 0 8px 24px rgba(31, 41, 36, 0.1);
 
   --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -69,17 +69,7 @@ body {
 /* ==============================
    MESH GRADIENT BACKGROUND
 ============================== */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(circle at 0% 0%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 100% 100%, rgba(244, 114, 182, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(192, 132, 252, 0.03) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: -1;
-}
+body::before { display: none; }
 
 /* ==============================
    TYPOGRAPHY
@@ -109,7 +99,7 @@ img { max-width: 100%; display: block; }
 section {
   position: relative;
   z-index: 1;
-  padding: 7rem 0;
+  padding: 5.5rem 0;
 }
 
 /* ==============================
@@ -119,16 +109,14 @@ section {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: background var(--transition-base), border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  transition: background var(--transition-base), border-color var(--transition-base);
 }
 
 .glass-card:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-accent);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-glow);
+  transform: none;
+  box-shadow: none;
 }
 
 /* ==============================
@@ -150,13 +138,13 @@ section {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  background: var(--accent-primary);
   color: white;
-  box-shadow: 0 4px 20px var(--accent-glow);
+  box-shadow: none;
 }
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(124, 106, 247, 0.45);
+  transform: none;
+  background: #245940;
 }
 
 .btn-outline {
@@ -211,10 +199,7 @@ section {
    GRADIENT TEXT
 ============================== */
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 50%, var(--accent-tertiary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-primary);
 }
 
 /* ==============================
@@ -237,12 +222,12 @@ section {
 .tag {
   display: inline-block;
   padding: 0.2rem 0.65rem;
-  border-radius: 99px;
+  border-radius: var(--radius-sm);
   font-size: 0.75rem;
   font-weight: 500;
-  background: rgba(124, 106, 247, 0.12);
+  background: #edf4ee;
   color: var(--accent-secondary);
-  border: 1px solid rgba(124, 106, 247, 0.2);
+  border: 1px solid #d3e4d7;
 }
 
 /* ==============================

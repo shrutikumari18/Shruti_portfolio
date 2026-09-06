@@ -294,3 +294,75 @@
   .hero-visual { transform: scale(0.9); }
   .scroll-hint { display: none; }
 }
+
+/* Keep the introduction focused on the person and the work. */
+.hero {
+  min-height: auto;
+  background: none;
+}
+
+.hero .container {
+  display: block;
+  min-height: auto;
+  padding-top: 9rem;
+  padding-bottom: 6rem;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.hero-visual,
+.scroll-hint {
+  display: none;
+}
+
+.hero-badge {
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  color: var(--accent-primary);
+}
+
+.hero-person-name {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+}
+
+.hero-idea-line {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.hero-socials {
+  gap: 1.25rem;
+}
+
+.resume-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.resume-downloads {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.1rem;
+}
+
+.social-link {
+  min-width: auto;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+
+.social-link:hover {
+  background: none;
+  border-color: transparent;
+  color: var(--accent-primary);
+  transform: none;
+}

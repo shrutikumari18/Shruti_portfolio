@@ -1,7 +1,7 @@
 .skills-section { padding-top: 2rem; }
-.skills-showcase-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2.5rem; }
+.skills-showcase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
 .skills-showcase-card { padding: 1.5rem; border-top: 2px solid var(--card-accent); }
-.skills-showcase-card.analytics { --card-accent: #fbbf24; }.skills-showcase-card.science { --card-accent: #f472b6; }.skills-showcase-card.development { --card-accent: #60a5fa; }.skills-showcase-card.tools { --card-accent: #a78bfa; }
+.skills-showcase-card.programming { --card-accent: #2f6f55; }.skills-showcase-card.analytics { --card-accent: #c28d2c; }.skills-showcase-card.science { --card-accent: #b56b54; }.skills-showcase-card.development { --card-accent: #4c7a91; }.skills-showcase-card.tools { --card-accent: #6d756f; }
 .skills-card-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; background: color-mix(in srgb, var(--card-accent) 15%, transparent); color: var(--card-accent); margin-bottom: 1.1rem; }
 .skills-showcase-card h3 { font-size: 1.05rem; margin-bottom: 1rem; }.skills-list { display: flex; flex-wrap: wrap; gap: .45rem; }
 @media (max-width: 1000px) { .skills-showcase-grid { grid-template-columns: repeat(2, 1fr); } }

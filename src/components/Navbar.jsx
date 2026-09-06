@@ -4,10 +4,7 @@ import './Navbar.css';
 const links = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#credentials', label: 'Credentials' },
   { href: '#projects', label: 'Projects' },
-  { href: '#resumes', label: 'Resume' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -71,11 +68,6 @@ export default function Navbar() {
               </a>
             </li>
           ))}
-          <li>
-            <a href="#contact" className="btn btn-primary nav-cta" id="nav-cta" onClick={() => handleNav('#contact')}>
-              Hire Me
-            </a>
-          </li>
         </ul>
 
         <button

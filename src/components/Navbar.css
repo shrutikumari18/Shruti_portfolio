@@ -9,9 +9,7 @@
 }
 
 .navbar.scrolled {
-  background: rgba(5, 5, 8, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(251, 250, 247, 0.96);
   border-bottom: 1px solid var(--border);
   padding: 0.8rem 0;
 }
@@ -52,9 +50,9 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.06);
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+  color: var(--accent-primary);
+  background: transparent;
+  text-shadow: none;
 }
 
 .nav-link.active::after {
@@ -63,11 +61,11 @@
   bottom: -2px;
   left: 50%;
   transform: translateX(-50%);
-  width: 22px;
+  width: 18px;
   height: 2px;
-  border-radius: 99px;
-  background: #ffffff;
-  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.7);
+  border-radius: 0;
+  background: var(--accent-primary);
+  box-shadow: none;
 }
 
 .nav-cta {

@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { motion as Motion } from 'motion/react';
-import { ArrowDown, BarChart3, Check, Code2, Link2, Mail, Sparkles } from 'lucide-react';
+import { Code2, Download, Link2, Mail } from 'lucide-react';
 import './Hero.css';
 
 const fadeInUp = {
@@ -17,6 +18,8 @@ const staggerContainer = {
 };
 
 export default function Hero() {
+  const [resumeOpen, setResumeOpen] = useState(false);
+
   return (
     <section id="home" className="hero">
       <div className="container">
@@ -26,33 +29,37 @@ export default function Hero() {
           initial="initial"
           animate="animate"
         >
-          <Motion.div className="hero-badge" variants={fadeInUp}>
-            <Sparkles size={13} />
-            <span>Available for meaningful work</span>
-          </Motion.div>
-
           <h1 className="hero-title">
-            <Motion.span className="hero-greeting" variants={fadeInUp}>Hi, I am</Motion.span>
+            <Motion.span className="hero-greeting" variants={fadeInUp}>Hi, I&apos;m</Motion.span>
             <Motion.span className="hero-name hero-person-name" variants={fadeInUp}>Shruti Kumari</Motion.span>
-            <Motion.span className="hero-name hero-idea-line" variants={fadeInUp}>I turn ideas<br /><span className="gradient-text">into impact.</span></Motion.span>
             <Motion.span className="hero-tagline" variants={fadeInUp}>
-              Data analyst, developer &amp; curious problem-solver.
+              Data Analyst | Data Science &amp; Full Stack Developer
             </Motion.span>
           </h1>
 
           <Motion.p className="hero-description" variants={fadeInUp}>
-            I build clear, useful digital experiences where thoughtful design meets
-            reliable code, turning complex problems into simple products people enjoy using.
+            I build data-driven solutions and practical web applications using modern technologies.
           </Motion.p>
 
           <Motion.div className="hero-actions" variants={fadeInUp}>
             <a href="#projects" className="btn btn-primary">
-              Explore my work
-              <ArrowDown size={15} />
+              View Projects
             </a>
-            <a href="#contact" className="btn btn-outline">
-              Let’s connect
-            </a>
+            <div className="resume-options">
+              <button type="button" className="btn btn-outline" onClick={() => setResumeOpen(!resumeOpen)} aria-expanded={resumeOpen}>
+                View Resume
+              </button>
+              {resumeOpen && <div className="resume-downloads">
+                <a href="/resumes/SHRUTI%20KUMARI-RESUME-Data%20Science.pdf" className="btn btn-outline" download>
+                  <Download size={16} />
+                  Data Science Resume
+                </a>
+                <a href="/resumes/SHRUTI%20KUMARI-RESUME-data%20analyst.pdf" className="btn btn-outline" download>
+                  <Download size={16} />
+                  Data Analyst Resume
+                </a>
+              </div>}
+            </div>
           </Motion.div>
 
           <Motion.div className="hero-socials" variants={fadeInUp}>
@@ -78,48 +85,7 @@ export default function Hero() {
             ))}
           </Motion.div>
         </Motion.div>
-
-        <Motion.div
-          className="hero-visual"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <div className="work-card glass-card">
-            <div className="work-card-topline">
-              <span className="window-dots"><i /><i /><i /></span>
-              <span>shruti / portfolio</span>
-              <span className="status-dot" />
-            </div>
-            <div className="work-card-heading">
-              <div className="avatar-circle"><span>S</span></div>
-              <div>
-                <p className="work-kicker">My approach</p>
-                <h2>Ideas into<br /><span>useful products.</span></h2>
-              </div>
-            </div>
-            <div className="work-chart" aria-hidden="true">
-              <BarChart3 size={22} />
-              <span /><span /><span /><span /><span /><span />
-            </div>
-            <div className="work-details">
-              <div><strong>Data</strong><small>find the story</small></div>
-              <div><strong>Code</strong><small>build the solution</small></div>
-              <div className="work-available"><Check size={15} /><small>design with purpose</small></div>
-            </div>
-          </div>
-        </Motion.div>
       </div>
-
-      <Motion.a
-        href="#about" 
-        className="scroll-hint" 
-        aria-label="Scroll down"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="scroll-icon" />
-      </Motion.a>
     </section>
   );
 }

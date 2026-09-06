@@ -5,6 +5,14 @@
   align-items: start;
 }
 
+.contact-simple {
+  max-width: 760px;
+}
+
+.contact-simple .section-title {
+  margin-bottom: 2rem;
+}
+
 .contact-body {
   color: var(--text-secondary);
   line-height: 1.8;
@@ -35,8 +43,8 @@
 
 .contact-socials {
   display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .contact-social-link {
@@ -58,6 +66,10 @@
   border-color: var(--border-accent);
   color: var(--accent-secondary);
   transform: translateX(4px);
+}
+
+@media (max-width: 520px) {
+  .contact-socials { flex-direction: column; }
 }
 
 /* Form */
