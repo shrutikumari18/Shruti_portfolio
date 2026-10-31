@@ -50,13 +50,9 @@ export default function Hero() {
                 View Resume
               </button>
               {resumeOpen && <div className="resume-downloads">
-                <a href="/resumes/SHRUTI%20KUMARI-RESUME-Data%20Science.pdf" className="btn btn-outline" download>
+                <a href="/resumes/SHRUTI%20KUMARI-RESUME-Software%20Engineer.pdf" className="btn btn-outline" download>
                   <Download size={16} />
-                  Data Science Resume
-                </a>
-                <a href="/resumes/SHRUTI%20KUMARI-RESUME-data%20analyst.pdf" className="btn btn-outline" download>
-                  <Download size={16} />
-                  Data Analyst Resume
+                  Software Engineer Resume
                 </a>
               </div>}
             </div>
