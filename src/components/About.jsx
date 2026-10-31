@@ -4,11 +4,11 @@ import './About.css';
 import './Skills.css';
 
 const skillGroups = [
-  { icon: Code2, title: 'Programming', accent: 'programming', items: ['Python', 'C++', 'JavaScript'] },
-  { icon: BarChart3, title: 'Data Analytics', accent: 'analytics', items: ['SQL', 'Excel', 'Power BI', 'Pandas'] },
-  { icon: BrainCircuit, title: 'Machine Learning', accent: 'science', items: ['Scikit-learn', 'ML', 'Data Visualization'] },
-  { icon: Globe, title: 'Web Development', accent: 'development', items: ['React', 'Node.js', 'Flask', 'MongoDB'] },
-  { icon: Wrench, title: 'Tools', accent: 'tools', items: ['Git', 'GitHub', 'VS Code'] },
+  { icon: Code2, title: 'Programming', accent: 'programming', items: ['Python', 'C++', 'Java', 'JavaScript'] },
+  { icon: Wrench, title: 'DSA & Algorithms', accent: 'tools', items: ['Data Structures', 'Algorithms', 'LeetCode', 'Problem Solving'] },
+  { icon: Globe, title: 'Full Stack Dev', accent: 'development', items: ['React', 'Node.js', 'Express', 'MongoDB', 'REST API'] },
+  { icon: BarChart3, title: 'Data Analytics', accent: 'analytics', items: ['SQL', 'Excel', 'Power BI', 'Pandas', 'NumPy'] },
+  { icon: BrainCircuit, title: 'Machine Learning', accent: 'science', items: ['Scikit-learn', 'OpenCV', 'ML Models', 'Data Visualization'] },
 ];
 
 export default function About() {
@@ -33,9 +33,10 @@ export default function About() {
               <h2 className="section-title">A little about me</h2>
             </div>
             <p className="about-bio reveal">
-              I am a Computer Science student specializing in Data Science. I am interested in
-              Data Analytics, Machine Learning and Full Stack Development. I enjoy building
-              practical solutions and working with data to solve real-world problems.
+              I am a Computer Science (Data Science) student with a strong passion for Software Engineering.
+              I love solving algorithmic problems, building scalable full-stack web applications, and applying
+              data science & machine learning to real-world problems. I actively practice DSA and strive to
+              write clean, efficient, and maintainable code.
             </p>
             <div className="about-details reveal">
               <div>
@@ -49,7 +50,7 @@ export default function About() {
               </div>
               <div>
                 <h3>Key Skills</h3>
-                <p>Python, SQL, Power BI, MS Excel, Machine Learning, React and Node.js</p>
+                <p>Python, C++, Java, DSA, React, Node.js, SQL, Machine Learning, Power BI</p>
               </div>
             </div>
             <a

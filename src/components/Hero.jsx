@@ -33,12 +33,12 @@ export default function Hero() {
             <Motion.span className="hero-greeting" variants={fadeInUp}>Hi, I&apos;m</Motion.span>
             <Motion.span className="hero-name hero-person-name" variants={fadeInUp}>Shruti Kumari</Motion.span>
             <Motion.span className="hero-tagline" variants={fadeInUp}>
-              Data Analyst | Data Science &amp; Full Stack Developer
+              Software Engineer · Data Science · Full Stack Developer
             </Motion.span>
           </h1>
 
           <Motion.p className="hero-description" variants={fadeInUp}>
-            I build data-driven solutions and practical web applications using modern technologies.
+            I design and build scalable software, craft data-driven solutions, and ship full-stack web applications using modern technologies.
           </Motion.p>
 
           <Motion.div className="hero-actions" variants={fadeInUp}>
@@ -50,6 +50,10 @@ export default function Hero() {
                 View Resume
               </button>
               {resumeOpen && <div className="resume-downloads">
+                <a href="/resumes/SHRUTI%20KUMARI-RESUME-Software%20Engineer.pdf" className="btn btn-outline" download>
+                  <Download size={16} />
+                  Software Engineer Resume
+                </a>
                 <a href="/resumes/SHRUTI%20KUMARI-RESUME-Data%20Science.pdf" className="btn btn-outline" download>
                   <Download size={16} />
                   Data Science Resume
